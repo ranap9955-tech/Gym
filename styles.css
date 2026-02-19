@@ -1,0 +1,222 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0b0f14;
+  color: white;
+}
+
+.header { position: fixed; width: 100%; z-index: 100; }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+}
+.logo { font-weight: 800; font-size: 22px; }
+.nav-links { list-style: none; display: flex; gap: 24px; align-items: center; }
+.nav a { color: white; text-decoration: none; opacity: .9; }
+.btn-small { background: #ff3c00; padding: 8px 14px; border-radius: 8px; }
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.9));
+}
+.hero-content { position: relative; max-width: 800px; }
+.hero h1 { font-size: 56px; margin-bottom: 10px; }
+.hero p { opacity: .85; margin-bottom: 24px; }
+
+.btn-primary {
+  background: linear-gradient(45deg,#ff3c00,#ff8a00);
+  border: none;
+  padding: 14px 26px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  padding: 14px 26px;
+  border-radius: 10px;
+  color: white;
+}
+.hero-buttons { display: flex; gap: 16px; justify-content: center; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 20px;
+  padding: 40px;
+  background: #111722;
+  text-align: center;
+}
+.stats h2 { color: #ff8a00; margin: 0; }
+
+.section { padding: 90px 40px; }
+.section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
+.dark { background: #0f141c; }
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.split img { width: 100%; border-radius: 16px; }
+.checklist { line-height: 2; opacity: .9; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  background: #151c26;
+  transition: .3s;
+}
+.card:hover { transform: translateY(-6px); }
+.card img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; }
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+}
+
+.pricing { text-align: center; }
+.price { font-size: 34px; color: #ff8a00; }
+.highlight { outline: 2px solid #ff8a00; transform: scale(1.05); }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 16px;
+}
+.gallery img {
+  width: 100%; height: 240px; object-fit: cover;
+  border-radius: 14px;
+}
+
+.contact {
+  max-width: 520px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contact input, .contact textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: black;
+  opacity: .7;
+}
+
+/* ===== MOBILE RESPONSIVE FIX ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+
+  /* NAV */
+  .nav {
+    flex-direction: column;
+    padding: 14px 20px;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    min-height: 90vh;
+    padding: 100px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  /* SPLIT GRID → STACK */
+  .split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* CARDS */
+  .card img {
+    height: 180px;
+  }
+
+  /* GALLERY */
+  .gallery img {
+    height: 180px;
+  }
+
+  /* STATS */
+  .stats {
+    padding: 30px 20px;
+  }
+
+  /* PRICING HIGHLIGHT SCALE FIX */
+  .highlight {
+    transform: none;
+  }
+
+  /* CONTACT FORM */
+  .contact {
+    width: 100%;
+  }
+
+  /* BUTTONS */
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+
+}

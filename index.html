@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Unity Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="nav">
+      <div class="logo">🏋️ The Unity Fitness</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact" class="btn-small">Join Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Build Your Dream Body With The Unity Fitness</h1>
+      <p>Premium fitness experience with expert trainers & world‑class equipment</p>
+      <div class="hero-buttons">
+        <button onclick="joinNow()" class="btn-primary">Start Today</button>
+        <button class="btn-outline">View Plans</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div><h2>1500+</h2><p>Members</p></div>
+    <div><h2>25</h2><p>Expert Trainers</p></div>
+    <div><h2>12</h2><p>Programs</p></div>
+    <div><h2>8 yrs</h2><p>Experience</p></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section split">
+    <div>
+      <h2>Why Choose Us</h2>
+      <p>
+        We deliver transformation — not just workouts. Our gym blends science,
+        coaching, and community to help members achieve real results.
+      </p>
+      <ul class="checklist">
+        <li>✔ Certified Strength Coaches</li>
+        <li>✔ Fat Loss Programs</li>
+        <li>✔ Athlete Training</li>
+        <li>✔ Diet & Progress Tracking</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f" />
+  </section>
+
+  <!-- TRAINERS -->
+  <section id="trainers" class="section dark">
+    <h2>Meet Our Coaches</h2>
+    <div class="cards">
+      <div class="card glass">
+        <img src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a" />
+        <h3>Rahul Mehta</h3>
+        <p>Body Transformation</p>
+      </div>
+      <div class="card glass">
+        <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c" />
+        <h3>Anita Roy</h3>
+        <p>Yoga & Mobility</p>
+      </div>
+      <div class="card glass">
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd" />
+        <h3>David Khan</h3>
+        <p>Cross Training</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section id="plans" class="section">
+    <h2>Membership Plans</h2>
+    <div class="cards">
+      <div class="card pricing">
+        <h3>Month</h3>
+        <p class="price">₹3000</p>
+        <p>Gym Access</p>
+        <button>Choose</button>
+      </div>
+      <div class="card pricing highlight">
+        <h3>Year</h3>
+        <p class="price">₹6000</p>
+        <p>Gym Access</p>
+        <button>Choose</button>
+      </div>
+      </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section dark">
+    <h2>Transformation Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1200&q=80" />
+
+      <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Join With Us</h2>
+
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <form class="contact" onsubmit="submitForm(event)">
+        <form name="enroll" method="POST" data-netlify="true">
+        <input placeholder="Name" required>
+        <input placeholder="Email" required>
+        <input placeholder="Phone" required>
+        <textarea placeholder="Your Fitness Goal"></textarea>
+        <button class="btn-primary">Enroll Now</button>
+      </form>
+
+      <!-- Gym Details -->
+      <div class="contact-details">
+        <h3> Contact Details</h3>
+        <p>📞 <strong>Mobile:</strong> +91 95949 10165</p>
+        <p>📸 <strong>Instagram:</strong> @theunityfitnessvirar</p>
+        <p>📍 <strong>Address:</strong><br>
+           The Unity Fitness,<br>
+           Chandrakanta Building, Chorghe Ground, Oppo, Nageshwar Mandir Rd, 
+           near Varad Vinayak Mandir, Gawad Wadi, Virar East, 
+           Virar, Maharashtra 401305<br>
+        </p>
+
+        <a class="btn-primary" href="https://instagram.com" target="_blank">Visit Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 The Unity Fitness — Premium Fitness Experience</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
